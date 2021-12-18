@@ -399,6 +399,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sms_advanced:
+    dependency: "direct main"
+    description:
+      name: sms_advanced
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   sms_maintained:
     dependency: "direct main"
     description:

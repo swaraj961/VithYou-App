@@ -12,10 +12,11 @@ import 'package:hardware_buttons/hardware_buttons.dart';
 import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sms_maintained/sms.dart';
+//import 'package:sms_maintained/sms.dart';
 
 import '../signin.dart';
 import '../theme.dart';
+import 'package:sms_advanced/sms_advanced.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -126,8 +127,26 @@ class _HomeState extends State<Home> {
             '\n\nMy current location is:\nhttps://www.google.com/maps/search/?api=1&query=$latlng';
       }
 
-      SmsSender sender = new SmsSender();
-      for (int i = 0; i < recipients.length; i++) {
+    /* Replacing old sms SMS library */
+    //   SmsSender sender = new SmsSender();
+    //   for (int i = 0; i < recipients.length; i++) {
+    //     SmsMessage message = new SmsMessage(recipients[i], messageBody);
+    //     message.onStateChanged.listen((state) {
+    //       if (state == SmsMessageState.Sent) {
+    //         print("SMS $i is sent!");
+    //       } else if (state == SmsMessageState.Delivered) {
+    //         print("SMS $i is delivered!");
+    //         print(messageBody);
+    //       }
+    //     });
+    //     sender.sendSms(message);
+    //   }
+    //   Get.snackbar(
+    //       'SOS sent!', 'All emergency contacts & police have been notified.');
+    // }
+
+     SmsSender sender = new SmsSender();
+     for (int i = 0; i < recipients.length; i++) {
         SmsMessage message = new SmsMessage(recipients[i], messageBody);
         message.onStateChanged.listen((state) {
           if (state == SmsMessageState.Sent) {
@@ -169,26 +188,7 @@ class _HomeState extends State<Home> {
     _volumeButtonSubscription =
         volumeButtonEvents.listen((VolumeButtonEvent event) {
       print('zzzzzzzzzzzzzzzzzzzzzzzzzzz');
-//      if(hardware){
-//        if(event==VolumeButtonEvent.VOLUME_DOWN){
-//          print('Volume Down Button Detected');
-//          down++;
-//        }
-//        if(event==VolumeButtonEvent.VOLUME_UP){
-//          print('Volume Up Button Detected');
-//          up++;
-//        }
-//        if(down == 2 && up ==1){
-//          print('DETECTED HARDWARE BUTTON SEQUENCE');
-//          _sendSMS();
-//        }
-//      }
-//      if(event==VolumeButtonEvent.VOLUME_DOWN && down==1){
-//        Timer(Duration(seconds: 2), () async {
-//          down = 0;
-//          up = 0;
-//        });
-//      }
+
     });
 
     RawKeyboard.instance.addListener((RawKeyEvent event) {
