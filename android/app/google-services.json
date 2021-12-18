@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "972152720037",
+    "project_id": "vithyou-d2d87",
+    "storage_bucket": "vithyou-d2d87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972152720037:android:69b8ce2ba1c7cf7133db4c",
+        "android_client_info": {
+          "package_name": "com.example.vith_you"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972152720037-35oicaq2oqn1ltfb0eamnbo3n7o8f21f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vith_you",
+            "certificate_hash": "231e224fffaab3269c213c5e56d9214a3df0d2eb"
+          }
+        },
+        {
+          "client_id": "972152720037-iomo27h6dki3m8vstqrqmn8at9bsio4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjAn20-7vMRrLf3cgyLfhsFIWOL9hwxpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972152720037-iomo27h6dki3m8vstqrqmn8at9bsio4e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
