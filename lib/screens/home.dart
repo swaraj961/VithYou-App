@@ -12,8 +12,9 @@ import 'package:provider/provider.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sms_maintained/sms.dart';
+import 'package:vithyou/screens/sideBar.dart';
 
-import '../signin.dart';
+import '../auth/signin.dart';
 import '../theme.dart';
 //import 'package:sms_advanced/sms_advanced.dart';
 
@@ -238,11 +239,13 @@ class _HomeState extends State<Home> {
 
     final themeChange = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
+      drawer: SideDrawer(),
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
         title: Text(
-          'Welcome ${userName.substring(0, userName.indexOf(' '))} ',
+          'Welcome ',
           style: TextStyle(
             fontFamily: 'Poppin',
             fontWeight: FontWeight.w700,
@@ -256,19 +259,6 @@ class _HomeState extends State<Home> {
               onTap: () => Get.toNamed('/contacts'),
               child: Icon(
                 Icons.contacts,
-                size: 30,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 25),
-            child: GestureDetector(
-              onTap: () => {
-                signOut(),
-                Navigator.popAndPushNamed(context, '/'),
-              },
-              child: Icon(
-                Icons.logout,
                 size: 30,
               ),
             ),

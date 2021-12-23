@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
             return GetMaterialApp(
               debugShowCheckedModeBanner: false,
               theme: Styles.themeData(themeChangeProvider.darkTheme, context),
-              title: 'College Companion',
+              title: 'SOS ',
               home: FutureBuilder(
                 // Initialize FlutterFire:
                 future: _initialization,
