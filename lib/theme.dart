@@ -35,16 +35,13 @@ class Styles {
     return ThemeData(
       primaryColor: isDarkTheme ? Color(0xffE94560) : Color(0xfff06292),
       accentColor: isDarkTheme ? Color(0xff55cec7) : Colors.blueAccent,
-
       fontFamily: 'GoogleSans',
-
       backgroundColor: isDarkTheme ? Color(0xff16213E) : Color(0xfffbdbf4),
       cardColor: isDarkTheme ? Color(0xffE94560) : Color(0xffffffff),
       canvasColor: isDarkTheme ? Colors.green : Color(0xff42a5f5),
       buttonColor: isDarkTheme ? Color(0xffFF0000) : Color(0xff009c96),
       splashColor: isDarkTheme ? Color(0xffff77a9) : Color(0xffb4004e),
       disabledColor: Colors.grey,
-
       brightness: isDarkTheme ? Brightness.dark : Brightness.light,
       buttonTheme: Theme.of(context).buttonTheme.copyWith(
           colorScheme: isDarkTheme ? ColorScheme.dark() : ColorScheme.light()),

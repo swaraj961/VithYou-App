@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn googleSignIn = GoogleSignIn();
 
@@ -15,7 +14,8 @@ bool admin;
 
 Future<String> signInWithGoogle(ctx) async {
   final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
-  final GoogleSignInAuthentication googleSignInAuthentication = await googleSignInAccount.authentication;
+  final GoogleSignInAuthentication googleSignInAuthentication =
+      await googleSignInAccount.authentication;
 
   final AuthCredential credential = GoogleAuthProvider.credential(
     accessToken: googleSignInAuthentication.accessToken,
@@ -28,7 +28,7 @@ Future<String> signInWithGoogle(ctx) async {
   assert(!user.isAnonymous);
   assert(await user.getIdToken() != null);
 
-  final User currentUser =  _auth.currentUser;
+  final User currentUser = _auth.currentUser;
   assert(user.uid == currentUser.uid);
 
   assert(user.email != null);
@@ -44,14 +44,22 @@ Future<String> signInWithGoogle(ctx) async {
 
   if (user != null) {
     // Check is already sign up
-    final QuerySnapshot result =  await FirebaseFirestore.instance.collection('users').where('id', isEqualTo: user.uid).get();
-    final List <DocumentSnapshot> documents = result.docs;
+    final QuerySnapshot result = await FirebaseFirestore.instance
+        .collection('users')
+        .where('id', isEqualTo: user.uid)
+        .get();
+    final List<DocumentSnapshot> documents = result.docs;
     if (documents.length == 0) {
       // Update data to server if new user
-      FirebaseFirestore.instance.collection('users').doc(user.uid).set(
-          { 'username': userName, 'photoUrl': userImageUrl, 'id': user.uid, 'email': userEmail, 'phone': '', 'admin': false});
-    }
-    else{
+      FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+        'username': userName,
+        'photoUrl': userImageUrl,
+        'id': user.uid,
+        'email': userEmail,
+        'phone': '',
+        'admin': false
+      });
+    } else {
       phone = documents[0]['phone'];
       admin = documents[0]['admin'];
     }
@@ -60,12 +68,12 @@ Future<String> signInWithGoogle(ctx) async {
   return "Signed In";
 }
 
-void signOut() async{
+void signOut() async {
   await _auth.signOut();
   await googleSignIn.signOut();
-  userEmail=null;
-  userName=null;
-  userImageUrl=null;
+  userEmail = null;
+  userName = null;
+  userImageUrl = null;
   uid = null;
   print("User Sign Out");
 }

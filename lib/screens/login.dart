@@ -20,7 +20,7 @@ class _LoginState extends State<Login> {
               children: [
                 CircularProgressIndicator(
                   valueColor: new AlwaysStoppedAnimation<Color>(
-                     Theme.of(context).colorScheme.secondary),
+                      Theme.of(context).colorScheme.secondary),
                 ),
                 Text(
                   '    Logging In.....',
@@ -147,11 +147,12 @@ class _LoginState extends State<Login> {
                             MaterialStateProperty.all<Color>(Color(0xffffafef)),
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Color(0xffffafef)),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40),
-                                side: BorderSide(
-                                    color: Colors.black38, width: 0.5))),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40),
+                                    side: BorderSide(
+                                        color: Colors.black38, width: 0.5))),
                       ),
                       onPressed: () => signIn(),
                       child: Padding(
