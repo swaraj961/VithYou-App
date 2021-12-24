@@ -1,1 +1,1 @@
-// !! todo : feedback form intergration
+// !! todo : feedback form integration

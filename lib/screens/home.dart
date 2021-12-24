@@ -144,23 +144,6 @@ class _HomeState extends State<Home> {
       Get.snackbar(
           'SOS sent!', 'All emergency contacts & police have been notified.');
     }
-
-    //  SmsSender sender = new SmsSender();
-    //  for (int i = 0; i < recipients.length; i++) {
-    //     SmsMessage message = new SmsMessage(recipients[i], messageBody);
-    //     message.onStateChanged.listen((state) {
-    //       if (state == SmsMessageState.Sent) {
-    //         print("SMS $i is sent!");
-    //       } else if (state == SmsMessageState.Delivered) {
-    //         print("SMS $i is delivered!");
-    //         print(messageBody);
-    //       }
-    //     });
-    //     sender.sendSms(message);
-    //   }
-    //   Get.snackbar(
-    //       'SOS sent!', 'All emergency contacts & police have been notified.');
-    // }
   }
 
   void locationServices() async {
@@ -239,6 +222,7 @@ class _HomeState extends State<Home> {
 
     final themeChange = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       drawer: SideDrawer(),
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(

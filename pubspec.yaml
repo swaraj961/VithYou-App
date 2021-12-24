@@ -43,6 +43,7 @@ dependencies:
   cloud_firestore: ^0.14.1+3
   hardware_buttons: ^1.0.0
   sms_advanced:
+  quick_feedback:
 
 #  firebase_storage: ^4.0.1
 
