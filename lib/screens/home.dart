@@ -14,7 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sms_maintained/sms.dart';
 import 'package:vithyou/screens/sideBar.dart';
 
-import '../auth/signin.dart';
+import '../auth/Auth.dart';
 import '../theme.dart';
 //import 'package:sms_advanced/sms_advanced.dart';
 

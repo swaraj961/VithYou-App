@@ -31,6 +31,7 @@ class DarkThemeProvider with ChangeNotifier {
 class Styles {
   static ThemeData themeData(bool isDarkTheme, BuildContext context) {
     return ThemeData(
+      visualDensity: VisualDensity.adaptivePlatformDensity,
       primaryColor: isDarkTheme ? Color(0xffE94560) : Color(0xfff06292),
       accentColor: isDarkTheme ? Color(0xff55cec7) : Colors.blueAccent,
       fontFamily: 'GoogleSans',

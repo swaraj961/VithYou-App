@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quick_feedback/quick_feedback.dart';
-import 'package:vithyou/auth/signin.dart';
+import 'package:vithyou/auth/Auth.dart';
 
 class SideDrawer extends StatelessWidget {
   void showFeedback(context) {
@@ -14,7 +14,7 @@ class SideDrawer extends StatelessWidget {
               'Share your feedback', // Feedback text field hint text default: Tell us more
           submitText: 'SUBMIT', // submit button text default: SUBMIT
           onSubmitCallback: (feedback) {
-            //Todo!: add rating to firebase 
+            //Todo!: add rating to firebase
             print('$feedback'); // map { rating: 2, feedback: 'some feedback' }
             Navigator.of(context).pop();
           },
