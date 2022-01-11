@@ -116,7 +116,7 @@ class _HomeState extends State<Home> {
       'longitude': position.longitude.toString(),
       'time': DateTime.now(),
       'emergencyContacts': recipients
-    });
+    },);
     if (recipients.length == 0) {
       Get.snackbar('No phone numbers found! Only police will be notified.',
           'Please check Emergency contacts list.');
@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
   void initState() {
     _volumeButtonSubscription =
         volumeButtonEvents.listen((VolumeButtonEvent event) {
-      print('zzzzzzzzzzzzzzzzzzzzzzzzzzz');
+      print('button test');
     });
 
     RawKeyboard.instance.addListener((RawKeyEvent event) {

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/utils.dart';
 import 'package:quick_feedback/quick_feedback.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:vithyou/auth/Auth.dart';
 
 class SideDrawer extends StatelessWidget {
@@ -14,7 +17,6 @@ class SideDrawer extends StatelessWidget {
               'Share your feedback', // Feedback text field hint text default: Tell us more
           submitText: 'SUBMIT', // submit button text default: SUBMIT
           onSubmitCallback: (feedback) {
-            //Todo!: add rating to firebase
             print('$feedback'); // map { rating: 2, feedback: 'some feedback' }
             Navigator.of(context).pop();
           },
@@ -25,6 +27,11 @@ class SideDrawer extends StatelessWidget {
         );
       },
     );
+  }
+
+  static const _url = "https://indianhelpline.com/WOMEN-HELPLINE/";
+  void _launchURL() async {
+    if (!await launch(_url)) throw 'Could not launch $_url';
   }
 
   @override
@@ -48,17 +55,20 @@ class SideDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.help),
             title: Text('Help line number'),
-            onTap: () => {},
+            onTap: _launchURL,
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('User Profile'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.person),
+          //   title: Text('User Profile'),
+          //   onTap: () => {Navigator.of(context).pop()},
+          // ),
           ListTile(
             leading: Icon(Icons.border_color),
             title: Text('Feedback'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Get.toNamed('/feedback'),
+              //Navigator.of(context).pop()
+            },
           ),
           ListTile(
               leading: Icon(Icons.stars),

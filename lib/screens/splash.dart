@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vithyou/main.dart';
-import 'package:vithyou/screens/home.dart';
 import 'package:vithyou/screens/login.dart';
 import 'package:vithyou/screens/splash/animation_screen.dart';
-import 'package:vithyou/screens/splash/test.dart';
 
 class Splash extends StatefulWidget {
   @override

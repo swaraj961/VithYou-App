@@ -39,7 +39,7 @@ class _LoginState extends State<Login> {
           signInWithGoogle(context).then((val) {
             if (val == "Signed In") {
               Get.back();
-              Get.offNamed('/home');
+              Get.offAllNamed('/home');
             } else {
               Get.back();
               Get.snackbar("Unable to sign in now.", "Try Again Later.",

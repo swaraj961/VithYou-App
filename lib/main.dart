@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:vithyou/screens/feedback.dart';
 import 'package:vithyou/screens/splash.dart';
 import 'theme.dart';
 import './screens/home.dart';
@@ -67,6 +68,7 @@ class _MyAppState extends State<MyApp> {
                 '/splash': (ctx) => Splash(),
                 '/home': (ctx) => Home(),
                 '/contacts': (ctx) => Contacts(),
+                '/feedback': (ctx) => ReachUs(),
               },
             );
           },
