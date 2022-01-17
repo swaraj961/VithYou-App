@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "972152720037-35oicaq2oqn1ltfb0eamnbo3n7o8f21f.apps.googleusercontent.com",
+          "client_id": "972152720037-icvklk4rdi31jl7k9k6vfnqctcfop0o7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.vith_you",
-            "certificate_hash": "231e224fffaab3269c213c5e56d9214a3df0d2eb"
+            "certificate_hash": "be578deb703bb4acf5759e79ec3b1b82ab223b0a"
           }
         },
         {
@@ -37,6 +37,13 @@
             {
               "client_id": "972152720037-iomo27h6dki3m8vstqrqmn8at9bsio4e.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "972152720037-9de0j34luh4e5n0f6gel7f7mpouts494.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vithyou"
+              }
             }
           ]
         }
