@@ -1,7 +1,6 @@
 # VithYou-App -  Minor project
-The project aims to make an SOS Alert application system to help send SMS alerts to the police/Admin and to your emergency contacts with high accuracy and highly efficient way within a second of trigging the alert 
-comes along a web dashboard so that the police can view all the SOS alerts. 
-The project aims to solve all the major issues present in other applications.
+The project aims to make an SOS Alert application system to help send SMS alerts to the police/Admin and to your emergency contacts with high accuracy and highly efficient way within a second of trigging the alert. 
+It comes along a web dashboard so that the police can view all the SOS alerts. 
 
 Webdashboard - https://vith-you-webdashboard.netlify.app/
 
