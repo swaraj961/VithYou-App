@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "972152720037",
+    "project_id": "vithyou-d2d87",
+    "storage_bucket": "vithyou-d2d87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972152720037:android:69b8ce2ba1c7cf7133db4c",
+        "android_client_info": {
+          "package_name": "com.example.vith_you"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972152720037-1j1ce6jbgcefpmq43fid7fnl9p5ne4n4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vith_you",
+            "certificate_hash": "231e224fffaab3269c213c5e56d9214a3df0d2eb"
+          }
+        },
+        {
+          "client_id": "972152720037-iomo27h6dki3m8vstqrqmn8at9bsio4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjAn20-7vMRrLf3cgyLfhsFIWOL9hwxpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972152720037-iomo27h6dki3m8vstqrqmn8at9bsio4e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "972152720037-9de0j34luh4e5n0f6gel7f7mpouts494.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vithyou"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
